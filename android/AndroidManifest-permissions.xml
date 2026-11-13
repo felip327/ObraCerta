@@ -1,0 +1,12 @@
+<!--
+Copie as permissões abaixo para dentro de <manifest> no arquivo:
+android/app/src/main/AndroidManifest.xml
+Não crie um segundo elemento <manifest>.
+-->
+<uses-permission android:name="android.permission.CAMERA" />
+<!-- Compatibilidade com Android 12 e anteriores, para acesso à galeria quando necessário -->
+<uses-permission
+    android:name="android.permission.READ_EXTERNAL_STORAGE"
+    android:maxSdkVersion="32" />
+<!-- Android 13+: acesso a imagens, quando o fluxo do sistema/plugin solicitar -->
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
